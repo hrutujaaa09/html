@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Set up the 3D container */
+.rotate-container {
+  width: 80%;
+  height: 400px;
+  margin: 50px auto;
+  perspective: 1500px; /* Add perspective to create the 3D effect */
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #3498db;
+  border-radius: 8px;
+}
+
+/* Style the iframe */
+.rotating-iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  transition: transform 1s ease; /* Smooth transition for rotation */
+  transform-origin: center center; /* Rotate from the center */
+}
+
+/* Add the 3D rotation effect on hover */
+.rotate-container:hover .rotating-iframe {
+  transform: rotateY(180deg); /* Rotate around the Y-axis */
+}
+
+    </style>  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Rotating Iframe Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="rotate-container">
+    <iframe src="https://www.example.com" frameborder="0" class="rotating-iframe"></iframe>
+  </div>
+</body>
+</html>
